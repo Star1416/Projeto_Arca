@@ -10,18 +10,22 @@
     <link rel="stylesheet" href="../../../../css/layout.css">
     <link rel="stylesheet" href="../../../../css/servicos/castracao/castrar.css">
 </head>
-<body>
-
 <body data-page="servicos">
 <header id="navbar"></header>
 
-<main>
+<div class="breadcrumb-bar border-bottom">
+    <div class="container py-2">
+        <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+            <ol class="breadcrumb mb-0">
+                <li class="breadcrumb-item"><a href="../../../../index.html">Início</a></li>
+                <li class="breadcrumb-item"><a href="../../../../html/navbar/servicos/servicos.html">Serviços</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Agendamento de castração</li>
+            </ol>
+        </nav>
+    </div>
+</div>
 
-    <nav class="breadcrumb_castracao" aria-label="Navegação estrutural">
-        <a href="../../../../html/navbar/servicos/servicos.html" class="breadcrumb_link">Serviços</a>
-        <i class="fa-solid fa-chevron-right breadcrumb_sep"></i>
-        <span class="breadcrumb_atual">Agendamento de castração</span>
-    </nav>
+<main>
 
     <section class="tela_castracao active" id="tela_info">
         <div class="titulo_castracao">
@@ -37,7 +41,7 @@
 
             <div class="titulo_texto">
                 <div class="titulo_linha1">Agendamento de</div>
-                <div class="titulo_linha2">castração<span class="titulo_tracos"></span></div>
+                <div class="titulo_linha2">castração</div>
                 <div class="titulo_sublinhado"></div>
             </div>
 

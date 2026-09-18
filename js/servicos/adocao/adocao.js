@@ -171,15 +171,11 @@ const animais_data = [
 
 let visualizacao_atual = 'grid';
 
-// ─── Prefixo relativo até a raiz do projeto ───────────────────────────────────
-function getPrefix() {
-    const match = window.location.pathname.match(/\/Projeto_Arca\/(.*)/);
-    if (!match || !match[1]) return './';
-    const parts = match[1].split('/').filter(Boolean);
-    const depth = parts.length - 1;
-    if (depth <= 0) return './';
-    return '../'.repeat(depth);
-}
+const PREFIXO_RAIZ = (function () {
+    const scriptSrc = document.currentScript ? document.currentScript.src : '';
+    const match = scriptSrc.match(/^(.*\/)js\//);
+    return match ? match[1] : './';
+})();
 
 document.addEventListener("DOMContentLoaded", function () {
     popular_racas();
@@ -263,7 +259,7 @@ function criar_card(animal) {
     const img_html = `
         <img
             class="animal_card_img"
-            src="${getPrefix()}${animal.foto}"
+            src="${PREFIXO_RAIZ}${animal.foto}"
             alt="Foto de ${animal.nome}"
             onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
         >
@@ -292,7 +288,7 @@ function criar_card(animal) {
 }
 
 function ir_para_detalhe(id) {
-    window.location.href = `${getPrefix()}html/navbar/servicos/adocao/animal_detalhe.html?id=${id}`;
+    window.location.href = `${PREFIXO_RAIZ}html/navbar/servicos/adocao/animal_detalhe.html?id=${id}`;
 }
 
 function mudar_visualizacao(tipo) {

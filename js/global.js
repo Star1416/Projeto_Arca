@@ -13,13 +13,9 @@ const footer_tel       = 'tel:+552732912005';
 const site_prefeitura  = 'https://www.serra.es.gov.br';
 
 function getRootPrefix() {
-    const path = window.location.pathname;
-    const match = path.match(/\/Projeto_Arca\/(.*)/);
-    if (!match || !match[1]) return './';
-    const parts = match[1].split('/').filter(Boolean);
-    const depth = parts.length - 1;
-    if (depth <= 0) return './';
-    return '../'.repeat(depth);
+    const scriptSrc = document.currentScript ? document.currentScript.src : '';
+    const match = scriptSrc.match(/^(.*\/)js\/global\.js/);
+    return match ? match[1] : './';
 }
 
 const R = getRootPrefix(); 

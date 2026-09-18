@@ -171,15 +171,11 @@ const animais_data = [
 
 let animal_atual = null;
 
-// ─── Prefixo relativo até a raiz do projeto ───────────────────────────────────
-function getPrefix() {
-    const match = window.location.pathname.match(/\/Projeto_Arca\/(.*)/);
-    if (!match || !match[1]) return './';
-    const parts = match[1].split('/').filter(Boolean);
-    const depth = parts.length - 1;
-    if (depth <= 0) return './';
-    return '../'.repeat(depth);
-}
+const PREFIXO_RAIZ = (function () {
+    const scriptSrc = document.currentScript ? document.currentScript.src : '';
+    const match = scriptSrc.match(/^(.*\/)js\//);
+    return match ? match[1] : './';
+})();
 
 document.addEventListener("DOMContentLoaded", function () {
     const params = new URLSearchParams(window.location.search);
@@ -192,7 +188,7 @@ document.addEventListener("DOMContentLoaded", function () {
             <div style="text-align:center; padding:80px 20px; color:#64748b;">
                 <i class="fa-solid fa-paw" style="font-size:52px; color:#cbd5e1; display:block; margin-bottom:16px;"></i>
                 <p style="font-size:16px;">Animal não encontrado.</p>
-                <a href="${getPrefix()}html/navbar/servicos/adocao/adocao.html" style="color:var(--cor-primaria); font-weight:600; text-decoration:none;">← Voltar para adoção</a>
+                <a href="${PREFIXO_RAIZ}html/navbar/servicos/adocao/adocao.html" style="color:var(--cor-primaria); font-weight:600; text-decoration:none;">← Voltar para adoção</a>
             </div>
         `;
         return;
@@ -217,7 +213,7 @@ function renderizar_detalhe(animal) {
     foto_wrapper.innerHTML = `
         <img
             class="detalhe_foto"
-            src="${getPrefix()}${animal.foto}"
+            src="${PREFIXO_RAIZ}${animal.foto}"
             alt="Foto de ${animal.nome}"
             onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
         >
@@ -301,7 +297,7 @@ function renderizar_mais_animais(id_atual) {
         card.innerHTML = `
             <img
                 class="mini_card_img"
-                src="${getPrefix()}${animal.foto}"
+                src="${PREFIXO_RAIZ}${animal.foto}"
                 alt="${animal.nome}"
                 onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
             >
@@ -320,7 +316,7 @@ function renderizar_mais_animais(id_atual) {
 }
 
 function ir_para_detalhe(id) {
-    window.location.href = `${getPrefix()}html/navbar/servicos/adocao/animal_detalhe.html?id=${id}`;
+    window.location.href = `${PREFIXO_RAIZ}html/navbar/servicos/adocao/animal_detalhe.html?id=${id}`;
 }
 
 
@@ -349,11 +345,11 @@ function atualizar_btn_continuar() {
 function confirmar_adocao() {
     fechar_termo();
     if (!animal_atual) return;
-    window.location.href = `${getPrefix()}html/navbar/servicos/adocao/formulario_adocao.html?id=${animal_atual.id}`;
+    window.location.href = `${PREFIXO_RAIZ}html/navbar/servicos/adocao/formulario_adocao.html?id=${animal_atual.id}`;
 }
 
 function fechar_confirmacao() {
     document.getElementById("confirmacao_overlay").classList.remove("ativo");
     document.body.style.overflow = "";
-    window.location.href = `${getPrefix()}html/navbar/servicos/adocao/adocao.html`;
+    window.location.href = `${PREFIXO_RAIZ}html/navbar/servicos/adocao/adocao.html`;
 }
