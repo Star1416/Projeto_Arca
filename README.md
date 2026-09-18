@@ -1,36 +1,32 @@
-# Projeto ARCA (Acadêmico)
+# Projeto ARCA
 
-O Programa ARCA, criado em janeiro de 2022, promove bem-estar animal com foco em castração, resgate, atendimento veterinário e adoção.
+O **Projeto ARCA** foi desenvolvido como uma atividade acadêmica proposta pela **Universidade Vila Velha (UVV)**, com o objetivo de aplicar conhecimentos de análise, design, desenvolvimento web e banco de dados em uma solução voltada para uma demanda real.
 
-*   **Alta demanda por serviços gratuitos:** mais de 2.100 vagas de castração esgotadas rapidamente.
-*   **Em jan–fev/2026:** 428 castrações e 198 atendimentos veterinários.
-*   **Realização:** 114 eventos de adoção, incentivando a redução do abandono.
+O projeto teve como base o **Programa ARCA**, criado em 2022, que atua com castração, resgate, atendimento veterinário e adoção de animais.
 
-### Prioridade de atendimento
-*   Pessoas de baixa renda (CadÚnico)
-*   ONGs e protetores independentes
-*   Regiões com maior vulnerabilidade
+## Sobre o projeto
 
-### Público predominante
-*   Pessoas de baixa renda e dependentes de serviços públicos
-*   Moradores de áreas com alta vulnerabilidade social
-*   Tutores e cuidadores de animais abandonados
-*   *Uso do sistema para:* castração, adoção, resgate e denúncias.
+A partir da análise do sistema existente, identificamos problemas relacionados à interface, usabilidade e divulgação do programa. Como solução, desenvolvemos uma plataforma **moderna, responsiva e intuitiva**, com diferentes perfis de acesso para **Cidadãos** e **ONGs/Clínicas Veterinárias**.
 
-### Desafios Identificados
-*   Site muito limitado.
-*   Poucas pessoas conhecem o projeto.
+O desenvolvimento envolveu todo o processo, desde o planejamento e criação das interfaces até a programação e estruturação do banco de dados.
 
-### A Solução Desenvolvida
-Os usuários precisam de um sistema simples, acessível e eficiente, que considere suas limitações tecnológicas e a urgência das demandas relacionadas ao bem-estar animal. Como proposta de melhoria, desenvolvi uma interface moderna e intuitiva focada em resolver esses problemas.
+## Desenvolvimento
 
-*   **O que foi feito:** Criação de um site responsivo e acessível, com destaque para a tela de login dinâmica que alterna de forma simples entre os perfis "Cidadão" e "ONG/Clínica Veterinária".
-*   **Participação do Grupo:** Análise dos problemas do sistema antigo, organização das ideias de usabilidade, estruturação da experiência do usuário (UI/UX) e desenvolvimento completo do código front-end.
+Durante o projeto, utilizamos:
 
-### Tecnologias Utilizadas
-*   HTML5 (Tags semânticas)
-*   CSS3 (Estilizações customizadas)
-*   **Bootstrap** (Componentes estruturados e responsividade fluida)
-*   JavaScript (Lógica de interação e manipulação do DOM)
+* **Figma** para prototipação e criação das interfaces
+* **Miro** para organização das ideias e fluxos
+* **Bootstrap** para estruturação e responsividade
+* **HTML5 e CSS3** para desenvolvimento e estilização
+* **JavaScript** para as interações e funcionalidades
+* **PostgreSQL** para alimentar o banco de dados e simular os clientes e usuários que utilizariam o sistema
 
- **[Clique aqui para ver o Projeto Arca rodando](https://Star1416.github.io/Projeto_Arca/)**
+Os dados utilizados no banco foram fictícios e serviram para realizar testes e simular um cenário próximo de uma aplicação real.
+
+## Apresentação
+
+Como resultado do trabalho desenvolvido, **fomos convidados para apresentar o projeto na Prefeitura da Serra**, onde demonstramos a solução e todo o processo de desenvolvimento realizado pela equipe.
+
+## Repositório
+
+[GitHub: Projeto ARCA](https://github.com/Star1416/Projeto_Arca)
