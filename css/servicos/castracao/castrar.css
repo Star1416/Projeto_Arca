@@ -14,20 +14,6 @@
     margin: 32px 0 28px;
 }
 
-.pawprint{
-    display: flex;
-    opacity: 0.6;
-}
-
-.pawprint svg{
-    width: 72px;
-    height: 72px;
-}
-
-.pawprint_dir svg{
-    transform: scaleX(-1);
-}
-
 .titulo_texto{
     text-align: center;
     line-height: 1.1;
