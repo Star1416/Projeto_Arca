@@ -81,8 +81,8 @@
 
 .sobre-blob {
     position: absolute;
-    bottom: -13%;
-    right: -15%;
+    bottom: -16%;
+    right: -20%;
     width: 128%;
     height: 125%;
     background: #C8E8F5;
@@ -92,7 +92,7 @@
 .sobre-dogs-img {
     position: absolute;
     bottom: -16%;
-    right: 5%;
+    right: 6%;
     width: 100%;
     max-width: 350px;
     height: auto;
