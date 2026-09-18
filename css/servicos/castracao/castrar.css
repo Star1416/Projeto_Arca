@@ -685,10 +685,6 @@
     .titulo_linha2{
         font-size: 26px;
     }
-    .pawprint svg {
-        width: 48px;
-        height: 48px;
-    }
     .cast_modal_botoes{
         flex-direction: column;
     }
