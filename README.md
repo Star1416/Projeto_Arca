@@ -21,7 +21,8 @@ Durante o projeto, utilizamos:
 * **JavaScript** para as interações e funcionalidades
 * **PostgreSQL** para alimentar o banco de dados e simular os clientes e usuários que utilizariam o sistema
 
-Os dados utilizados no banco foram fictícios e serviram para realizar testes e simular um cenário próximo de uma aplicação real.
+Os dados utilizados no banco foram fictícios e serviram para realizar testes e simular um cenário próximo de uma aplicação real. Além disso,
+O banco de dados utilizado no projeto não está disponível neste repositório, pois foi desenvolvido como parte de uma atividade acadêmica separada proposta pela universidade, mas integra o desenvolvimento e os testes deste projeto.
 
 ## Apresentação
 
